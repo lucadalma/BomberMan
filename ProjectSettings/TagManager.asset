@@ -7,6 +7,8 @@ TagManager:
   - DestructibleWall
   - Floor
   - NonDestructibleWall
+  - Bomb
+  - BombExplosion
   layers:
   - Default
   - TransparentFX
@@ -18,7 +20,7 @@ TagManager:
   - DestructibleWall
   - Floor
   - NonDestructibleWall
-  - 
+  - Bomb
   - 
   - 
   - 

@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     GameObject bomb;
 
+    [SerializeField]
+    GameObject bombPosition;
+
     void Start()
     {
         playerStats = FindObjectOfType<PlayerStats>();
@@ -22,6 +25,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         MovePlayer();
+        PlaceBomb();
     }
 
     public void MovePlayer() 
@@ -29,7 +33,6 @@ public class PlayerController : MonoBehaviour
         float inputX = Input.GetAxis("Horizontal");
         float inputY = Input.GetAxis("Vertical");
 
-        Debug.Log(inputX);
 
         if (inputX > 0)
         {
@@ -53,6 +56,15 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity = movement;
 
+    }
+
+    public void PlaceBomb() 
+    {
+        if (Input.GetButtonDown("Jump") && playerStats.bombRatioPlacement == playerStats.maxBombRatioPlacement) 
+        {
+            playerStats.bombRatioPlacement = 0;
+            Instantiate(bomb, bombPosition.transform.position, Quaternion.identity);
+        }
     }
 
 }

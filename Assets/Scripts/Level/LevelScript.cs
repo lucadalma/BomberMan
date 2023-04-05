@@ -45,7 +45,16 @@ public class LevelScript : MonoBehaviour
                 }
                 else 
                 {
-                    Instantiate(Floor, new Vector3((i - 0.5f), (j - 0.5f)), Quaternion.identity);       
+                    float randomChance = Random.Range(0, 11);
+                    Debug.Log(randomChance);
+                    if (randomChance >= 9)
+                    {
+                        Instantiate(DestructibleWall, new Vector3((i - 0.5f), (j - 0.5f)), Quaternion.identity);
+                    }
+                    else 
+                    {
+                        Instantiate(Floor, new Vector3((i - 0.5f), (j - 0.5f)), Quaternion.identity);       
+                    }
                 }
             }
         }

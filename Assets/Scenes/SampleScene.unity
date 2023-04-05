@@ -189,7 +189,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.24458341, g: 0.4745098, b: 0.19215688, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -284,6 +284,11 @@ MonoBehaviour:
   Floor: {fileID: 7660537502564859503, guid: 40598e5c90ca38d46b6904a75baf44a6, type: 3}
   XLenghtLevel: 11
   YLenghtLevel: 11
+--- !u!1 &1121253153 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 85905782, guid: eb8100faacb515c429e5a23140bfd8c3, type: 3}
+  m_PrefabInstance: {fileID: 5109469560366488552}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5109469560366488552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -291,6 +296,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1436597009, guid: eb8100faacb515c429e5a23140bfd8c3, type: 3}
+      propertyPath: bombRatioPlacement
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436597009, guid: eb8100faacb515c429e5a23140bfd8c3, type: 3}
+      propertyPath: maxBombRatioPlacement
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5109469558816575080, guid: eb8100faacb515c429e5a23140bfd8c3, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -339,6 +352,10 @@ PrefabInstance:
       propertyPath: bomb
       value: 
       objectReference: {fileID: 6854667490269954792, guid: b3dfb4ca40924bd4dbc1b4f37efba467, type: 3}
+    - target: {fileID: 5109469558816575081, guid: eb8100faacb515c429e5a23140bfd8c3, type: 3}
+      propertyPath: bombPosition
+      value: 
+      objectReference: {fileID: 1121253153}
     - target: {fileID: 5109469558816575127, guid: eb8100faacb515c429e5a23140bfd8c3, type: 3}
       propertyPath: m_Name
       value: Player
