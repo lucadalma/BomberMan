@@ -37,8 +37,11 @@ public class LevelScript : MonoBehaviour
     {
         for (int i = 0; i < XLenghtLevel; i++)
         {
+            Instantiate(NonDestructibleWall, new Vector3((i - 0.5f), (-1.5f)), Quaternion.identity);
+            float lastJ = 0;
             for (int j = 0; j < YLenghtLevel; j++)
             {
+                
                 if (i % 2 != 0 && j % 2 != 0)
                 {
                     Instantiate(NonDestructibleWall, new Vector3((i - 0.5f), (j - 0.5f)), Quaternion.identity);
@@ -56,7 +59,13 @@ public class LevelScript : MonoBehaviour
                         Instantiate(Floor, new Vector3((i - 0.5f), (j - 0.5f)), Quaternion.identity);       
                     }
                 }
+                lastJ = j;
+                Instantiate(NonDestructibleWall, new Vector3((-1.5f), (j - 0.5f)), Quaternion.identity);
+                Instantiate(NonDestructibleWall, new Vector3((YLenghtLevel - 0.5f), (j - 0.5f)), Quaternion.identity);
             }
+
+            Instantiate(NonDestructibleWall, new Vector3((i - 0.5f), (lastJ + 0.5f)), Quaternion.identity);
+
         }
     }
 }

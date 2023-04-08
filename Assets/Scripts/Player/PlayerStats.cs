@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class PlayerStats : MonoBehaviour
 
     [SerializeField]
     public float movementSpeed;
+
+    [SerializeField]
+    Image BombRatioImage;
 
     bool onRegenBomb = false;
     private IEnumerator coroutine;
@@ -32,6 +36,7 @@ public class PlayerStats : MonoBehaviour
     IEnumerator RegenBomb()
     {
         bombRatioPlacement += 1;
+        BombRatioImage.fillAmount = bombRatioPlacement / 3;
         yield return new WaitForSeconds(1);
         onRegenBomb = false;
     }

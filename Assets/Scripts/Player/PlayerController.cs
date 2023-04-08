@@ -16,8 +16,29 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     GameObject bombPosition;
 
+    GameManager gm;
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy")) 
+        {
+            gm.gameStatus = GameManager.GameStatus.EndGame;
+            gm.gameResult = GameManager.GameResult.GameOver;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("BombExplosion"))
+        {
+            gm.gameStatus = GameManager.GameStatus.EndGame;
+            gm.gameResult = GameManager.GameResult.GameOver;
+        }
+    }
+
     void Start()
     {
+        gm = FindObjectOfType<GameManager>();
         playerStats = FindObjectOfType<PlayerStats>();
         rb = GetComponent<Rigidbody2D>();
     }
