@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 965039125478988240}
   - component: {fileID: 3305944731276244274}
   - component: {fileID: 4641162718948269256}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: explosionDown
   m_TagString: BombExplosion
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 5903686758862861495}
   - component: {fileID: 6522819853333462859}
   - component: {fileID: 8520053245379237259}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: explosionRight
   m_TagString: BombExplosion
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 2852035556497526867}
   - component: {fileID: 1291062229016875785}
   - component: {fileID: 2632907030630086998}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: explosionLeft
   m_TagString: BombExplosion
   m_Icon: {fileID: 0}
@@ -507,6 +507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 3424353970744270789}
+  playerStats: {fileID: 0}
 --- !u!50 &553479857351545850
 Rigidbody2D:
   serializedVersion: 4
@@ -539,7 +540,7 @@ GameObject:
   - component: {fileID: 8066122044177228345}
   - component: {fileID: 6904638446818838912}
   - component: {fileID: 4895989283468410378}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: explosionUp
   m_TagString: BombExplosion
   m_Icon: {fileID: 0}
